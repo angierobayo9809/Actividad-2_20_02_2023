@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starbucks Landing Page Website Design using Html CSS & Javascript</title>
+    <title>Responsive Starbucks Landing Page Website Design using Html CSS & Javascript</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,8 @@
         <div class="circle"></div>
         <header>
             <a href="#"><img src="img/logo.png" class="logo"></a>
-            <ul>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">What's New</a></li>
@@ -53,6 +54,13 @@
         function changeCircleColor(color){
             const circle = document.querySelector('.circle');
             circle.style.background = color;
+        }
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
         }
     </script>
 </body>
